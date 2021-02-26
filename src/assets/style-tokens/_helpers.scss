@@ -1,0 +1,14 @@
+@import './_color-palette';
+@import './_mixins';
+
+.bold {
+    font-weight: 500;
+}
+
+.gray {
+    color: $gray;
+}
+
+.center {
+    text-align: center;
+}

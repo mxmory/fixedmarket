@@ -1,0 +1,159 @@
+@import './src/assets/style-tokens/color-palette';
+@import './src/assets/style-tokens/mixins.scss';
+
+.authorization.ant-layout {
+    min-height: 100vh;
+    @include theme-aware('background', 'color-background');
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: url(../../assets/images/backgrounds/man_works_pc.png)
+            no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-blend-mode: color, normal;
+        z-index: -1;
+    }
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        @include theme-aware('background', 'auth-picture-background');
+        opacity: 0.6;
+        z-index: 0;
+    }
+
+    .row__content-wrapper {
+        margin: 20px 0 0;
+        flex-grow: 2;
+        .form-wrapper {
+            @include theme-aware('background', 'auth-form-bg');
+            border-radius: 20px;
+            padding: 40px 30px 30px 30px;
+            width: 390px;
+
+            h1 {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 28px;
+                line-height: 100%;
+                text-align: center;
+                letter-spacing: -0.06em;
+                margin-bottom: 30px;
+            }
+
+            .google_auth-btn {
+                width: 100%;
+                background: #4285f4;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 14px;
+                color: $white;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 13px;
+                line-height: 100%;
+                text-align: center;
+
+                svg {
+                    margin-right: 10px;
+                }
+            }
+
+            .mail-item-themed {
+                @include theme-aware('fill', 'color-text');
+            }
+
+            .login-form-button {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 13px;
+                line-height: 100%;
+                text-align: center;
+                color: $white;
+            }
+
+            .form-bottom {
+                color: $white;
+                text-align: center;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 11px;
+                line-height: 140.27%;
+
+                span {
+                    margin-right: 5px;
+                }
+            }
+
+            .form-description-text {
+                text-align: center;
+                font-size: 13px;
+            }
+
+            .reset__password-picture {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    width: 36px;
+                    height: 24px;
+
+                    path {
+                        fill: $orange;
+                    }
+                }
+            }
+
+            .ant-input-suffix {
+                @include theme-aware('background', 'auth-form-bg');
+                width: min-content;
+                @include theme-aware('color', 'color-text');
+                white-space: pre;
+                box-sizing: content-box;
+
+                svg {
+                    margin-right: 10px;
+                }
+            }
+
+            .ant-checkbox-wrapper {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 9px;
+                line-height: 120.3%;
+            }
+        }
+    }
+
+    .ant-input-affix-wrapper {
+        input[type='email'],
+        input[type='password'] {
+            & + .ant-input-suffix {
+                z-index: 2;
+                top: 0;
+                left: 12px;
+                padding: 0 10px;
+                transition: 0.3s ease;
+                border-radius: 10px;
+                width: min-content;
+                box-sizing: content-box;
+            }
+        }
+    }
+}

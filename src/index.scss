@@ -1,0 +1,162 @@
+@import 'assets/style-tokens/_color-palette';
+@import 'assets/style-tokens/_antd';
+@import 'assets/style-tokens/_fonts';
+@import 'assets/style-tokens/_mixins';
+@import 'assets/style-tokens/_helpers';
+@import 'assets/style-tokens/_media';
+@import 'assets/style-tokens/_content-placeholders';
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    background-color: $background;
+    color: $white;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.06em;
+    margin-bottom: 38px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 0;
+    line-height: normal;
+}
+
+ul {
+    padding: 0;
+
+    li {
+        margin: 0;
+        list-style: none;
+    }
+}
+
+svg {
+    vertical-align: middle;
+}
+
+button {
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    svg {
+        vertical-align: middle;
+        pointer-events: none;
+    }
+}
+
+p {
+    margin-bottom: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+// input {
+//     &.ant-input {
+//         font-size: 14px;
+
+//         &.error {
+//             border-color: $red;
+//             color: $red;
+//         }
+//     }
+// }
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    background-color: $blue;
+    border-radius: 10px;
+    height: 44px;
+    max-width: 500px;
+    font-size: 13px;
+    width: 100%;
+    border: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        // background-color: $orange2;
+        color: $white;
+    }
+
+    &:active {
+        // background-color: $orange3;
+        color: $white;
+        border-color: transparent;
+    }
+
+    &--small {
+        width: auto;
+        height: 40px;
+        padding: 0 35px;
+
+        &.ant-btn-loading {
+            &:after {
+                width: 20px !important;
+                height: 20px !important;
+            }
+        }
+    }
+
+    .ant-btn-loading-icon {
+        display: none;
+    }
+
+    &.ant-btn-loading {
+        & > span {
+            opacity: 0;
+        }
+
+        &:after {
+            content: '';
+            animation: spin 0.5s infinite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+        }
+    }
+}
+
+.container {
+    max-width: 1212px;
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    color: $black;
+    background-color: $white;
+    border-radius: 12px;
+    padding: 36px;
+}

@@ -1,0 +1,23 @@
+@import '../../../assets/style-tokens/color-palette';
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 0;
+
+    &__logo {
+        color: $white;
+        display: flex;
+        align-items: center;
+
+        & > * {
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    &__center {
+    }
+}

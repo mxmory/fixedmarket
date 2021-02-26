@@ -1,0 +1,69 @@
+@import './src/assets/style-tokens/color-palette';
+@import './src/assets/style-tokens/_mixins';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 108px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+
+    &__section {
+        display: flex;
+        align-items: center;
+
+        .category {
+            cursor: pointer;
+
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+
+            &:hover {
+                .category__menu {
+                    display: block;
+                }
+            }
+
+            &__menu {
+                z-index: 10;
+                display: none;
+                position: absolute;
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+
+    &__logo {
+        margin-right: 25px;
+    }
+
+    &__location {
+        cursor: pointer;
+        color: $blue;
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 10px;
+        }
+    }
+
+    &__search {
+        margin-right: 25px;
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+
+        .btn {
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+        }
+    }
+}

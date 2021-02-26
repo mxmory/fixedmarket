@@ -1,0 +1,43 @@
+@import '../../../assets/style-tokens/color-palette';
+
+.catalog-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    .title {
+        margin-right: 10px;
+    }
+
+    .sort {
+        margin-right: auto;
+        display: flex;
+
+        &__field {
+            color: $gray;
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+
+            &.active {
+                color: $black;
+            }
+        }
+    }
+
+    .filters {
+        display: flex;
+        align-items: center;
+
+        &__field {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            .label {
+                margin-left: 10px;
+            }
+        }
+    }
+}

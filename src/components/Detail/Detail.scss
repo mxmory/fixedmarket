@@ -1,0 +1,49 @@
+@import '../../assets/style-tokens/color-palette';
+
+.detail {
+    .ant-breadcrumb {
+        margin-bottom: 12px;
+    }
+
+    &__img {
+        img {
+            height: auto;
+            border-radius: 12px;
+
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+
+        span {
+            color: $gray;
+            display: block;
+            margin-left: 10px;
+        }
+    }
+
+    &__btns {
+        margin-top: 12px;
+
+        button {
+            &:not(:last-child) {
+                margin-right: 12px;
+            }
+        }
+    }
+
+    &__info {
+        position: sticky;
+        top: 12px;
+    }
+}

@@ -1,0 +1,10 @@
+/*reinit antd styles*/
+@import './mixins';
+@import './color-palette';
+
+.ant-btn {
+    border: none;
+    padding: 9px 18px;
+    border-radius: 4px;
+    height: auto;
+}
